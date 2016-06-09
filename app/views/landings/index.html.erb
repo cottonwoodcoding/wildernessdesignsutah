@@ -5,8 +5,8 @@
   <div class="gallery">
     <% @photos.each do |photo| %>
       <div class='col s12 m4'>
-        <a href="<%= photo.attachment.url %>" data-caption="<%= photo.caption %>">
-          <img src="<%= photo.attachment.url(:medium) %>" class='responsive-img work-photo'>
+        <a href="<%= photo.attachment.fullpath %>" data-caption="<%= photo.caption %>">
+          <%= cl_image_tag(photo.attachment.path, { size: '200x200', crop: :thumb }) %>
         </a>
       </div>
     <% end %>

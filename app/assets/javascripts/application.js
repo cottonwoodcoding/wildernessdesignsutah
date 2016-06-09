@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require materialize-sprockets
+//= require attachinary
+//= require baguetteBox
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .

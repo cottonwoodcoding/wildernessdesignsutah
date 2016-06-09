@@ -34,7 +34,8 @@ gem 'omniauth-facebook'
 gem 'google-analytics-rails'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
-gem 'paperclip-cloudinary'
+gem 'cloudinary'
+gem 'attachinary'
 
 group :production do
   gem 'rails_12factor'
