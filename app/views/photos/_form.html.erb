@@ -1,3 +1,6 @@
+<% if @photo.persisted? %>
+  <%= cl_image_tag(@photo.attachment.path, { size: '200x200', crop: :thumb }) %>
+<% end %>
 <div class='row'>
   <%= form_for @photo, html: { multipart: true, class: 'col s12'} do |form| %>
     <div class='row'>
@@ -14,6 +17,9 @@
           <input class="file-path validate" type="text">
         </div>
       </div>
+      <% unless params[:action] == 'index' %>
+        <%= link_to 'Back', :back, class: 'grey btn' %>
+      <% end %>
       <%= form.submit 'Save', class: 'btn' %>
     <% end %>
 </div>
