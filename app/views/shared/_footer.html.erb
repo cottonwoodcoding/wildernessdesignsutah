@@ -1,0 +1,11 @@
+<footer class="page-footer white-text center">
+  © <%= Date.today.year %> Creative Kingdom SLC
+  <br />
+  <% if user_signed_in? %>
+    <%= link_to 'Manage Photos', photos_path, class: 'black-text' %>
+    <br />
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'black-text' %>
+  <% else %>
+    <%= link_to 'Admin Login', new_user_session_path, class: 'black-text' %>
+  <% end %>
+</footer>

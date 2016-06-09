@@ -1,0 +1,19 @@
+<div class='row'>
+  <%= form_for @photo, html: { multipart: true, class: 'col s12'} do |form| %>
+    <div class='row'>
+      <div class="input-field col s12">
+        <%= form.text_field :caption, autofocus: true %>
+        <%= form.label 'Photo Caption' %>
+      </div>
+      <div class="file-field input-field col s12">
+        <div class="btn">
+          <span>File</span>
+          <%= form.file_field :attachment %>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <%= form.submit 'Save', class: 'btn' %>
+    <% end %>
+</div>

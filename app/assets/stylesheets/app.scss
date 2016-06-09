@@ -1,0 +1,35 @@
+html, body {
+  color: black;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.logo-wrapper {
+  margin-top: 80px;
+}
+
+.work-photo {
+  margin: 10px 0 10px 0;
+}
+
+.flash {
+  text-align: center;
+  color: white;
+}
+
+.flash.success {
+  background-color: grey;
+}
+
+.flash.error {
+  background-color: red;
+}

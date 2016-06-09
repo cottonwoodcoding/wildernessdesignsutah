@@ -1,0 +1,8 @@
+@import "materialize/components/color";
+$primary-color: grey !default;
+$secondary-color: black !default;
+@import 'materialize';
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import 'baguetteBox';
+@import 'app';
+@import 'landings';

@@ -1,0 +1,30 @@
+<h1>Admin Access</h1>
+<hr />
+
+<h3>Add New Photo</h3>
+<%= render('form') %>
+
+<hr />
+<h3>Site Photos</h3>
+
+<% if @photos.any? %>
+  <div class='row'>
+    <div class='gallery'>
+      <% @photos.each do |photo| %>
+        <div class='col s12 m4'>
+          <a href="<%= photo.attachment.url %>" data-caption="<%= photo.caption %>">
+            <img class='responsive-img' src="<%= photo.attachment.url(:medium) %>">
+          </a>
+          <div class='center'>
+            <%= link_to 'Edit', edit_photo_path(photo) %>
+            <%= link_to 'Delete', photo_path(photo), method: :delete, data: {confirm: 'Really Delete?'} %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <h5>No Photos Yet.</h5>
+<% end %>
+
+<%= will_paginate(@photos) %>

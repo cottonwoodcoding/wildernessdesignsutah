@@ -3,13 +3,32 @@
 <head>
   <title>Ckslc</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <%= csrf_meta_tags %>
-<!-- Prelang: Analytics / Google Analytics -->
-    <%= analytics_init if Rails.env.production? or Rails.env.development? %></head>
+  <!-- Prelang: Analytics / Google Analytics -->
+  <%= analytics_init if Rails.env.production? %></head>
 <body>
-
-<%= yield %>
-
+  <%= render('shared/nav') %>
+  <% if flash.any? %>
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
+  <% end %>
+  <main>
+    <div class='row center'>
+      <div class='col s12 m4 logo-wrapper hide-on-small-only'>
+        <%= image_tag('creativekingdom2Black.png', class: 'responsive-img') %>
+        <h5>Custom Handmade Furniture</h5>
+      </div>
+      <div class='col s12 m7 offset-m1 right'>
+        <%= yield %>
+      </div>
+    </div>
+  </main>
+  <%= render('shared/footer') %>
 </body>
 </html>
