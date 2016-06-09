@@ -36,6 +36,7 @@ gem 'tzinfo-data'
 gem 'validates_formatting_of'
 gem 'cloudinary'
 gem 'attachinary'
+gem "font-awesome-rails"
 
 group :production do
   gem 'rails_12factor'
