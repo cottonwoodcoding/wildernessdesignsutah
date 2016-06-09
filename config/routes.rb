@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'admin/index'
 
-  devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords"}, skip: [:sessions, :registrations]
+  devise_for :users
   root 'landings#index'
   get 'bio', to: 'landings#bio'
   resources :photos, except: [:show, :new]
