@@ -1,6 +1,6 @@
 class LandingsController < ApplicationController
   def index
-    @photos = Photo.paginate(page: params[:page])
+    @photos = Photo.random.paginate(page: params[:page])
   end
 
   def bio
