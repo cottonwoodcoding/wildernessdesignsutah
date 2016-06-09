@@ -7,6 +7,8 @@ gem 'rails', '4.2.5'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails'
+# CoffeeScript Rails
+gem 'coffee-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # Use jquery as the JavaScript library
