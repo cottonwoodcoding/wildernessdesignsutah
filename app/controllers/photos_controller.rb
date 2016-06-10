@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   before_action :photo, except: [:index, :create]
 
   def index
-    @photos = Photo.paginate(page: params[:page])
+    @photos = Photo.all
     @photo = Photo.new
   end
 
