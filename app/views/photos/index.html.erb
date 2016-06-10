@@ -13,7 +13,7 @@
       <% @photos.each do |photo| %>
         <div class='col s12 m4'>
           <a href="<%= photo.attachment.fullpath %>" data-caption="<%= photo.caption %>">
-            <%= cl_image_tag(photo.attachment.path, { size: '200x200', crop: :thumb }) %>
+            <%= cl_image_tag(photo.attachment.path, class: 'responsive-img work-photo') %>
           </a>
           <div class='center'>
             <%= link_to 'Edit', edit_photo_path(photo) %>
