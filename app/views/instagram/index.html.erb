@@ -1,0 +1,21 @@
+<div class='center'>
+  <h3>CKSLC Instagram</h3>
+  <strong>
+    <a href='https://www.instagram.com/creative.kingdom.slc' target='_blank'>
+      <%= fa_icon "instagram" %>
+      See All Posts
+    </a>
+  </strong>
+  <div class='row'>
+    <div class="gallery">
+		  <% @instagram.each do |instagram| %>
+		    <% images = instagram.images %>
+		    <div class='col s6 m3'>
+		      <a href="<%= images.standard_resolution.url %>">
+		        <%= image_tag(images.thumbnail.url, class: 'responsive-img work-photo') %>
+		      </a>
+		    </div>
+		  <% end %>
+		</div>
+	</div>
+</div>

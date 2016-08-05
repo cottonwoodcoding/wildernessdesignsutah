@@ -5,20 +5,20 @@
     <a href='/' class='brand-logo hide-on-med-and-up'>CKSLC</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
+        <li><a href="/instagram"><%= fa_icon "instagram" %> Instagram</a></li>
+        <li><a href='/landings'>Gallery</a></li>
         <li><a href="/bio">Bio</a></li>
-        <li><a href="mailto:sales@ckslc.com" target='_blank'>Contact</a></li>
-        <li><a href='https://www.instagram.com/creative.kingdom.slc/' target='_blank'><%= fa_icon "instagram" %></a></li>
+        <li><a href="mailto:ckslcsales@gmail.com" target='_blank'>Contact</a></li>
         <% if current_user %>
           <li class='divider'></li>
           <li><%= link_to 'Manage', photos_path %></li>
         <% end %>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="/">Home</a></li>
+        <li><a href="/instagram"><%= fa_icon "instagram" %> Instagram</a></li>
+        <li><a href='/landings'>Gallery</a></li>
         <li><a href="/bio">Bio</a></li>
-        <li><a href="mailto:sales@ckslc.com">Contact</a></li>
-        <li><a href='https://www.instagram.com/creative.kingdom.slc/' target='_blank'><%= fa_icon "instagram" %></a></li>
+        <li><a href="mailto:ckslcsales@gmail.com">Contact</a></li>
         <% if current_user %>
           <li class='divider'></li>
           <li><%= link_to 'Manage', photos_path %></li>
