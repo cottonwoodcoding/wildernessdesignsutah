@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'instagram#index'
+  root 'landings#index'
   mount Attachinary::Engine => "/attachinary"
   devise_for :users
 
