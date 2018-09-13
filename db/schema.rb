@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160609214012) do
   create_table "photos", force: :cascade do |t|
     t.string   "attachment_file_name"
     t.string   "attachment_content_type"
-    t.integer  "attachment_file_size"
+    t.integer  "attachment_file_size",    limit: 8
     t.datetime "attachment_updated_at"
     t.string   "caption"
     t.datetime "created_at"

@@ -5,8 +5,8 @@
     <a href='/' class='brand-logo hide-on-med-and-up'>CKSLC</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
         <li class="<%= 'active' if params[:controller] == 'instagram' %>"><a href="/instagram"><%= fa_icon "instagram" %> Instagram</a></li>
+        <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
         <li class="<%= 'active' if params[:action] == 'bio' %>"><a href="/bio">Bio</a></li>
         <li><a href="mailto:ckslcsales@gmail.com" target='_blank'>Contact</a></li>
         <% if current_user %>
@@ -15,8 +15,8 @@
         <% end %>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
         <li class="<%= 'active' if params[:controller] == 'instagram' %>"><a href="/instagram"><%= fa_icon "instagram" %> Instagram</a></li>
+        <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
         <li class="<%= 'active' if params[:action] == 'bio' %>"><a href="/bio">Bio</a></li>
         <li><a href="mailto:ckslcsales@gmail.com">Contact</a></li>
         <% if current_user %>
