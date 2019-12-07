@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require materialize
-//= require attachinary
 //= require baguetteBox
 //= require jquery_ujs
 //= require_tree .

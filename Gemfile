@@ -14,8 +14,7 @@ gem 'jbuilder'
 
 # Added Gems
 gem 'coffee-rails'
-gem 'attachinary'
-# gem 'cloudinary'
+gem 'cloudinary', '~> 1.13.1'
 gem 'devise'
 gem 'google-analytics-rails'
 gem 'instagram'
