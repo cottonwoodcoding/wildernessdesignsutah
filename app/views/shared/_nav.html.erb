@@ -1,28 +1,26 @@
+<ul class="sidenav" id="mobile-demo">
+  <li class="<%= 'active' if params[:controller] == 'instagram' %>"><a href="/instagram"><%= fa_icon "instagram" %> Instagram</a></li>
+    <% if gallery_photos.any? %>
+    <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
+  <% end %>
+  <li class="<%= 'active' if params[:action] == 'bio' %>"><a href="/bio">Bio</a></li>
+  <li><a href="mailto:wildernessdesignsutah@gmail.com">Contact</a></li>
+</ul>
 <div class="navbar-fixed">
-  <nav>
-    <div class="nav-wrapper">
-    <a href="/" class="brand-logo hide-on-small-only">CREATIVE KINGDOM SLC</a>
-    <a href='/' class='brand-logo hide-on-med-and-up'>CKSLC</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo hide-on-small-only">Wilderness Designs Utah</a>
+    <a href='/' class='brand-logo hide-on-med-and-up' style='display: flex; justify-content: center; align-items: center; height: 100%;'>
+      <%= image_tag(image_path('wdu-long-logo-with-text'), class: 'responsive-img', width: 500) %>
+    </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li class="<%= 'active' if params[:controller] == 'instagram' %>"><a href="/instagram"><%= fa_icon "instagram" %> Instagram</a></li>
-        <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
-        <li class="<%= 'active' if params[:action] == 'bio' %>"><a href="/bio">Bio</a></li>
-        <li><a href="mailto:ckslcsales@gmail.com" target='_blank'>Contact</a></li>
-        <% if current_user %>
-          <li class='divider'></li>
-          <li><%= link_to 'Manage', photos_path %></li>
+        <% if gallery_photos.any? %>
+          <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
         <% end %>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li class="<%= 'active' if params[:controller] == 'instagram' %>"><a href="/instagram"><%= fa_icon "instagram" %> Instagram</a></li>
-        <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
         <li class="<%= 'active' if params[:action] == 'bio' %>"><a href="/bio">Bio</a></li>
-        <li><a href="mailto:ckslcsales@gmail.com">Contact</a></li>
-        <% if current_user %>
-          <li class='divider'></li>
-          <li><%= link_to 'Manage', photos_path %></li>
-        <% end %>
+        <li><a href="mailto:wildernessdesignsutah@gmail.com" target='_blank'>Contact</a></li>
       </ul>
     </div>
   </nav>

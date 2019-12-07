@@ -11,9 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require materialize-sprockets
+//= require materialize
 //= require attachinary
 //= require baguetteBox
 //= require jquery_ujs
 //= require_tree .
-

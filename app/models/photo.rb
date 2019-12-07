@@ -1,6 +1,5 @@
 class Photo < ActiveRecord::Base
-  acts_as_votable
-  has_attachment :attachment, accept: [:jpg, :png, :gif]
+  has_attached_file :attachment, accept: [:jpg, :png, :gif]
 
   def self.random
     order('random()')

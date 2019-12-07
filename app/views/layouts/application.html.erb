@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Creative Kingdom SLC</title>
+  <title>Wilderness Designs Utah</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= javascript_include_tag 'application' %>
-  <%= cloudinary_js_config %>
+  <%# <%= cloudinary_js_config %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <%= favicon_link_tag %>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <%= csrf_meta_tags %>
   <!-- Prelang: Analytics / Google Analytics -->
   <%= analytics_init if Rails.env.production? %></head>
@@ -24,7 +24,6 @@
     <div class='row center'>
       <div class='col s12 m4 logo-wrapper hide-on-small-only'>
         <%= image_tag('creativekingdom2Black.png', class: 'responsive-img') %>
-        <h5>Custom Handmade Furniture</h5>
       </div>
       <div class='col s12 m7 offset-m1 right'>
         <%= yield %>

@@ -18,3 +18,4 @@
 /vendor/bundle/
 /config/cloudinary_dev.yml
 /config/instagram.yml
+.env

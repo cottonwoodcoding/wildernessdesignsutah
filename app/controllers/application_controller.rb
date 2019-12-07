@@ -3,6 +3,14 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  
+
+  def gallery_photos
+    @photos = Photo.all
+  end
+
+  helper_method :gallery_photos
+
   private
   
   #-> Prelang (user_login:devise)
