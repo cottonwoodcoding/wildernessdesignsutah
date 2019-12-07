@@ -1,8 +1,5 @@
 <ul class="sidenav" id="mobile-demo">
   <li class="<%= 'active' if params[:controller] == 'instagram' %>"><a href="/instagram"><%= fa_icon "instagram" %> Instagram</a></li>
-    <% if gallery_photos.any? %>
-    <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
-  <% end %>
   <li class="<%= 'active' if params[:action] == 'bio' %>"><a href="/bio">Bio</a></li>
   <li><a href="mailto:wildernessdesignsutah@gmail.com">Contact</a></li>
 </ul>
@@ -16,9 +13,6 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li class="<%= 'active' if params[:controller] == 'instagram' %>"><a href="/instagram"><%= fa_icon "instagram" %> Instagram</a></li>
-        <% if gallery_photos.any? %>
-          <li class="<%= 'active' if params[:controller] == 'landings' && params[:action] == 'index' %>"><a href='/landings'>Gallery</a></li>
-        <% end %>
         <li class="<%= 'active' if params[:action] == 'bio' %>"><a href="/bio">Bio</a></li>
         <li><a href="mailto:wildernessdesignsutah@gmail.com" target='_blank'>Contact</a></li>
       </ul>
