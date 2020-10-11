@@ -8,16 +8,7 @@
 			</a>
 		</strong>
 	</div>
-  <div class='row'>
-    <div class="gallery">
-		  <% @instagram.each do |instagram| %>
-		    <% images = instagram.images %>
-		    <div class='col s6 m3'>
-		      <a href="<%= images.standard_resolution.url %>" data-caption="<%= instagram.caption['text'] %>">
-		        <%= image_tag(images.thumbnail.url, class: 'responsive-img work-photo') %>
-		      </a>
-		    </div>
-		  <% end %>
-		</div>
+	<div class='row'>
+      <div class="gallery"></div>
 	</div>
 </div>

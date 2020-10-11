@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.5'
+ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
@@ -13,17 +13,16 @@ gem 'jquery-rails'
 gem 'jbuilder'
 
 # Added Gems
-gem 'coffee-rails'
-gem 'cloudinary', '~> 1.13.1'
-gem 'devise'
-gem 'google-analytics-rails'
-gem 'instagram'
-gem 'materialize-sass'
-gem "font-awesome-rails"
-gem 'material_icons' 
-gem "paperclip"
-gem 'puma'
 gem 'bootsnap'
+gem 'cloudinary', '~> 1.13.1'
+gem 'coffee-rails'
+gem 'devise'
+gem 'font-awesome-rails'
+gem 'google-analytics-rails'
+gem 'material_icons'
+gem 'materialize-sass'
+gem 'paperclip'
+gem 'puma'
 
 group :production do
   gem 'rails_12factor'
@@ -31,8 +30,8 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :development, :test do
